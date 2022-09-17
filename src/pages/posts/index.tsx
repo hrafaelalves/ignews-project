@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next';
+import { GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { RichText } from 'prismic-dom';
@@ -38,6 +38,13 @@ export default function Posts({ posts }: PostsProps){
             </main>
         </>
     )
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+    return {
+        paths: [],
+        fallback: 'blocking' // true, false, blocking
+    }
 }
 
 export const getStaticProps: GetStaticProps = async () => {
