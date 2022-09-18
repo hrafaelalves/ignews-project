@@ -20,9 +20,9 @@ export function SubscribeButton(){
         }
 
         try{
-            const response = await api.post('/subscribe');
-
-            console.log(response);
+            const response = await api.post('/api/subscribe', {
+                user: session.user
+            });
 
             const { sessionId } = response.data;
 
@@ -38,7 +38,7 @@ export function SubscribeButton(){
         <button 
             type='button' 
             className={styles.subscribeButton}
-            onClick={handleSubscribe}
+            onClick={() => handleSubscribe()}
         >Subscribe now</button>
     );
 }

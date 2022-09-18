@@ -16,7 +16,7 @@
     "@types/prismic-dom": "^2.1.1",
     "axios": "^0.27.2",
     "faunadb": "^4.6.0",
-    "next": "12.2.2",
+    "next": "^12.3.0",
     "next-auth": "^4.10.1",
     "prismic-dom": "^2.2.7",
     "react": "18.2.0",
