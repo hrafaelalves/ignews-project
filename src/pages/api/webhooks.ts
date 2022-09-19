@@ -74,7 +74,7 @@ const webhook = async (request: NextApiRequest, response: NextApiResponse) => {
                 }
             }catch(err){
                 console.log(err);
-                return response.json({ error: 'Webhook handler failed.' })
+                return response.json({ error: err })
             }
         }
         
