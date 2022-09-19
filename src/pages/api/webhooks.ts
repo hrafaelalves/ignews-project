@@ -73,7 +73,7 @@ const webhook = async (request: NextApiRequest, response: NextApiResponse) => {
                         throw new Error('Unhandled event.')
                 }
             }catch(err){
-                return response.json({ error: 'Webhook handler failed.' })
+                return response.json({ error: 'Webhook handler failed.' + err })
             }
         }
         
